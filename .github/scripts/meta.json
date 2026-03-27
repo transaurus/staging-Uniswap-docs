@@ -1,0 +1,10 @@
+{
+  "sourceUrl": "https://github.com/Uniswap/docs",
+  "branch": "main",
+  "docusaurusRoot": ".",
+  "configFile": "docusaurus.config.ts",
+  "translateCommand": "yarn docusaurus write-translations",
+  "buildCommand": "NODE_OPTIONS='--openssl-legacy-provider' yarn docusaurus build",
+  "buildOutput": "build",
+  "packageManager": "yarn"
+}
