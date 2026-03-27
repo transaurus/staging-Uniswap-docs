@@ -1,0 +1,9 @@
+{
+  "label": "Core Functions",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Implementation details of functions present in the /src/mappings folder"
+  },
+  "key": "api-subgraph-subgraphs-devs-functions-n-handlers-mappings"
+}
