@@ -1,0 +1,542 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.main.category.Concepts": {
+    "message": "Concepts",
+    "description": "The label for category 'Concepts' in sidebar 'main'"
+  },
+  "sidebar.main.category.concepts-protocol": {
+    "message": "Protocol Concepts",
+    "description": "The label for category 'Protocol Concepts' in sidebar 'main'"
+  },
+  "sidebar.main.category.concepts-governance": {
+    "message": "Governance",
+    "description": "The label for category 'Governance' in sidebar 'main'"
+  },
+  "sidebar.main.category.Contracts": {
+    "message": "Contracts",
+    "description": "The label for category 'Contracts' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4": {
+    "message": "v4 Protocol",
+    "description": "The label for category 'v4 Protocol' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-concepts": {
+    "message": "Concepts",
+    "description": "The label for category 'Concepts' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-quickstart": {
+    "message": "Quickstart",
+    "description": "The label for category 'Quickstart' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-quickstart-manage-liquidity": {
+    "message": "Manage Liquidity",
+    "description": "The label for category 'Manage Liquidity' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-quickstart-hooks": {
+    "message": "Hooks",
+    "description": "The label for category 'Hooks' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-guides-hooks": {
+    "message": "Hooks",
+    "description": "The label for category 'Hooks' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-reference-core": {
+    "message": "Core",
+    "description": "The label for category 'Core' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-reference-core-libraries": {
+    "message": "Libraries",
+    "description": "The label for category 'Libraries' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-reference-core-types": {
+    "message": "Types",
+    "description": "The label for category 'Types' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-reference-core-interfaces": {
+    "message": "interfaces",
+    "description": "The label for category 'interfaces' in sidebar 'main'"
+  },
+  "sidebar.main.category.test": {
+    "message": "test",
+    "description": "The label for category 'test' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-reference-periphery": {
+    "message": "Periphery",
+    "description": "The label for category 'Periphery' in sidebar 'main'"
+  },
+  "sidebar.main.category.base": {
+    "message": "base",
+    "description": "The label for category 'base' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v4-reference-periphery-interfaces": {
+    "message": "interfaces",
+    "description": "The label for category 'interfaces' in sidebar 'main'"
+  },
+  "sidebar.main.category.lens": {
+    "message": "lens",
+    "description": "The label for category 'lens' in sidebar 'main'"
+  },
+  "sidebar.main.category.libraries": {
+    "message": "libraries",
+    "description": "The label for category 'libraries' in sidebar 'main'"
+  },
+  "sidebar.main.category.utils": {
+    "message": "utils",
+    "description": "The label for category 'utils' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3": {
+    "message": "v3 Protocol",
+    "description": "The label for category 'v3 Protocol' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-concepts": {
+    "message": "Concepts",
+    "description": "The label for category 'Concepts' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-guides-swaps": {
+    "message": "Implement A Swap",
+    "description": "The label for category 'Implement A Swap' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-guides-providing-liquidity": {
+    "message": "Providing Liquidity",
+    "description": "The label for category 'Providing Liquidity' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-guides-liquidity-mining": {
+    "message": "Liquidity Mining",
+    "description": "The label for category 'Liquidity Mining' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-guides-flash-integrations": {
+    "message": "Implement Flash Swaps",
+    "description": "The label for category 'Implement Flash Swaps' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-guides-governance": {
+    "message": "Governance Proposals",
+    "description": "The label for category 'Governance Proposals' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-core": {
+    "message": "Core",
+    "description": "The label for category 'Core' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-core-interfaces": {
+    "message": "Interfaces",
+    "description": "The label for category 'Interfaces' in sidebar 'main'"
+  },
+  "sidebar.main.category.callback": {
+    "message": "callback",
+    "description": "The label for category 'callback' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-core-interfaces-pool": {
+    "message": "Pool",
+    "description": "The label for category 'Pool' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-core-libraries": {
+    "message": "Libraries",
+    "description": "The label for category 'Libraries' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-governance": {
+    "message": "Governance",
+    "description": "The label for category 'Governance' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery": {
+    "message": "Periphery",
+    "description": "The label for category 'Periphery' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery-base": {
+    "message": "Base",
+    "description": "The label for category 'Base' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery-interfaces": {
+    "message": "Interfaces",
+    "description": "The label for category 'Interfaces' in sidebar 'main'"
+  },
+  "sidebar.main.category.external": {
+    "message": "external",
+    "description": "The label for category 'external' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery-lens": {
+    "message": "Lens",
+    "description": "The label for category 'Lens' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery-libraries": {
+    "message": "Libraries",
+    "description": "The label for category 'Libraries' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery-staker": {
+    "message": "Staker",
+    "description": "The label for category 'Staker' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery-staker-interfaces": {
+    "message": "Interfaces",
+    "description": "The label for category 'Interfaces' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery-staker-libraries": {
+    "message": "Libraries",
+    "description": "The label for category 'Libraries' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-periphery-test": {
+    "message": "Test",
+    "description": "The label for category 'Test' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v3-reference-deployments": {
+    "message": "Deployments",
+    "description": "The label for category 'Deployments' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-protocol-fee": {
+    "message": "Protocol Fee",
+    "description": "The label for category 'Protocol Fee' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-protocol-fee-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-protocol-fee-technical-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-smart-wallet": {
+    "message": "Smart Wallet",
+    "description": "The label for category 'Smart Wallet' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-smart-wallet-concepts": {
+    "message": "Concepts",
+    "description": "The label for category 'Concepts' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-smart-wallet-advanced-usage": {
+    "message": "Advanced Usage",
+    "description": "The label for category 'Advanced Usage' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-uniswapx": {
+    "message": "UniswapX",
+    "description": "The label for category 'UniswapX' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-uniswapx-fillers": {
+    "message": "Fillers",
+    "description": "The label for category 'Fillers' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-uniswapx-fillers-mainnet": {
+    "message": "Mainnet",
+    "description": "The label for category 'Mainnet' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-uniswapx-fillers-arbitrum": {
+    "message": "Arbitrum",
+    "description": "The label for category 'Arbitrum' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-uniswapx-fillers-priority": {
+    "message": "Unichain, Base",
+    "description": "The label for category 'Unichain, Base' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-universal-router": {
+    "message": "Universal Router",
+    "description": "The label for category 'Universal Router' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-permit2": {
+    "message": "Permit2",
+    "description": "The label for category 'Permit2' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-permit2-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-liquidity-launchpad": {
+    "message": "Liquidity Launchpad",
+    "description": "The label for category 'Liquidity Launchpad' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-liquidity-launchpad-quickstart": {
+    "message": "Quickstart",
+    "description": "The label for category 'Quickstart' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-liquidity-launchpad-advanced": {
+    "message": "Advanced",
+    "description": "The label for category 'Advanced' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-the-compact": {
+    "message": "The Compact",
+    "description": "The label for category 'The Compact' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-the-compact-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2": {
+    "message": "v2 Protocol",
+    "description": "The label for category 'v2 Protocol' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-concepts": {
+    "message": "Concepts",
+    "description": "The label for category 'Concepts' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-concepts-01-protocol-overview": {
+    "message": "Protocol Overview",
+    "description": "The label for category 'Protocol Overview' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-concepts-02-core-concepts": {
+    "message": "Core Concepts",
+    "description": "The label for category 'Core Concepts' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-concepts-03-advanced-topics": {
+    "message": "Advanced Topics",
+    "description": "The label for category 'Advanced Topics' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-guides-interface-integration": {
+    "message": "Interface Integration",
+    "description": "The label for category 'Interface Integration' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-guides-smart-contract-integration": {
+    "message": "Smart Contract Integration",
+    "description": "The label for category 'Smart Contract Integration' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-reference-api": {
+    "message": "API",
+    "description": "The label for category 'API' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-reference-governance": {
+    "message": "Governance",
+    "description": "The label for category 'Governance' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v2-reference-smart-contracts": {
+    "message": "Smart Contracts",
+    "description": "The label for category 'Smart Contracts' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v1": {
+    "message": "v1 Protocol",
+    "description": "The label for category 'v1 Protocol' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v1-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.contracts-v1-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.SDKs": {
+    "message": "SDKs",
+    "description": "The label for category 'SDKs' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v4": {
+    "message": "v4 SDK",
+    "description": "The label for category 'v4 SDK' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v4-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v4-guides-swaps": {
+    "message": "Swaps",
+    "description": "The label for category 'Swaps' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v4-guides-liquidity": {
+    "message": "Position Management",
+    "description": "The label for category 'Position Management' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v4-guides-advanced": {
+    "message": "Advanced",
+    "description": "The label for category 'Advanced' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v4-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v4-reference-classes": {
+    "message": "classes",
+    "description": "The label for category 'classes' in sidebar 'main'"
+  },
+  "sidebar.main.category.enumerations": {
+    "message": "enumerations",
+    "description": "The label for category 'enumerations' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v4-reference-interfaces": {
+    "message": "interfaces",
+    "description": "The label for category 'interfaces' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3": {
+    "message": "v3 SDK",
+    "description": "The label for category 'v3 SDK' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3-guides-swaps": {
+    "message": "Swaps",
+    "description": "The label for category 'Swaps' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3-guides-liquidity": {
+    "message": "Pooling Liquidity",
+    "description": "The label for category 'Pooling Liquidity' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3-guides-advanced": {
+    "message": "Advanced",
+    "description": "The label for category 'Advanced' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3-reference-classes": {
+    "message": "classes",
+    "description": "The label for category 'classes' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3-reference-enums": {
+    "message": "enums",
+    "description": "The label for category 'enums' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v3-reference-interfaces": {
+    "message": "interfaces",
+    "description": "The label for category 'interfaces' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-web3-react": {
+    "message": "web3-react",
+    "description": "The label for category 'web3-react' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-web3-react-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-core": {
+    "message": "Core SDK",
+    "description": "The label for category 'Core SDK' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-core-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-core-reference-classes": {
+    "message": "classes",
+    "description": "The label for category 'classes' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-core-reference-enums": {
+    "message": "enums",
+    "description": "The label for category 'enums' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v2": {
+    "message": "v2 SDK",
+    "description": "The label for category 'v2 SDK' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v2-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v2-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v1": {
+    "message": "v1 SDK",
+    "description": "The label for category 'v1 SDK' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v1-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.sdk-v1-reference": {
+    "message": "Technical Reference",
+    "description": "The label for category 'Technical Reference' in sidebar 'main'"
+  },
+  "sidebar.main.category.APIs": {
+    "message": "APIs",
+    "description": "The label for category 'APIs' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-trading": {
+    "message": "Trading API",
+    "description": "The label for category 'Trading API' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph": {
+    "message": "Subgraph",
+    "description": "The label for category 'Subgraph' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-guides": {
+    "message": "Guides",
+    "description": "The label for category 'Guides' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs": {
+    "message": "Subgraph-Devs",
+    "description": "The label for category 'Subgraph-Devs' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-contracts": {
+    "message": "Contracts",
+    "description": "The label for category 'Contracts' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-contracts.link.generated-index.description": {
+    "message": "Details of contracts & events monitored in the subgraph",
+    "description": "The generated-index page description for category 'Contracts' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-schemas": {
+    "message": "Entity Schemas",
+    "description": "The label for category 'Entity Schemas' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-schemas.link.generated-index.description": {
+    "message": "Details of the Schemas for each entity defined in the schema file",
+    "description": "The generated-index page description for category 'Entity Schemas' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-functions-n-handlers": {
+    "message": "Functions",
+    "description": "The label for category 'Functions' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-functions-n-handlers.link.generated-index.description": {
+    "message": "Implementation details of functions present in the /src folder",
+    "description": "The generated-index page description for category 'Functions' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-functions-n-handlers-mappings": {
+    "message": "Core Functions",
+    "description": "The label for category 'Core Functions' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-functions-n-handlers-mappings.link.generated-index.description": {
+    "message": "Implementation details of functions present in the /src/mappings folder",
+    "description": "The generated-index page description for category 'Core Functions' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-functions-n-handlers-utils": {
+    "message": "Utility Functions",
+    "description": "The label for category 'Utility Functions' in sidebar 'main'"
+  },
+  "sidebar.main.category.api-subgraph-subgraphs-devs-functions-n-handlers-utils.link.generated-index.description": {
+    "message": "Docs for /src/utils functions",
+    "description": "The generated-index page description for category 'Utility Functions' in sidebar 'main'"
+  },
+  "sidebar.main.category.Support": {
+    "message": "Support",
+    "description": "The label for category 'Support' in sidebar 'main'"
+  },
+  "sidebar.main.category.LLMs": {
+    "message": "LLMs",
+    "description": "The label for category 'LLMs' in sidebar 'main'"
+  },
+  "sidebar.universalRouterLegacy.category.Universal Router (Legacy)": {
+    "message": "Universal Router (Legacy)",
+    "description": "The label for category 'Universal Router (Legacy)' in sidebar 'universalRouterLegacy'"
+  },
+  "sidebar.universalRouterLegacy.doc.Overview": {
+    "message": "Overview",
+    "description": "The label for the doc item 'Overview' in sidebar 'universalRouterLegacy', linking to the doc universal-router-legacy/overview"
+  },
+  "sidebar.universalRouterLegacy.doc.Technical Reference": {
+    "message": "Technical Reference",
+    "description": "The label for the doc item 'Technical Reference' in sidebar 'universalRouterLegacy', linking to the doc universal-router-legacy/technical-reference"
+  }
+}

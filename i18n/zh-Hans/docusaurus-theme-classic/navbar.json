@@ -1,0 +1,42 @@
+{
+  "item.label.Concepts": {
+    "message": "Concepts",
+    "description": "Navbar item with label Concepts"
+  },
+  "item.label.Contracts": {
+    "message": "Contracts",
+    "description": "Navbar item with label Contracts"
+  },
+  "item.label.SDKs": {
+    "message": "SDKs",
+    "description": "Navbar item with label SDKs"
+  },
+  "item.label.APIs": {
+    "message": "APIs",
+    "description": "Navbar item with label APIs"
+  },
+  "item.label.Support": {
+    "message": "Support",
+    "description": "Navbar item with label Support"
+  },
+  "item.label.LLMs": {
+    "message": "LLMs",
+    "description": "Navbar item with label LLMs"
+  },
+  "item.label.Give Feedback": {
+    "message": "Give Feedback",
+    "description": "Navbar item with label Give Feedback"
+  },
+  "item.label.Uniswap Labs": {
+    "message": "Uniswap Labs",
+    "description": "Navbar item with label Uniswap Labs"
+  },
+  "item.label.Whitepaper": {
+    "message": "Whitepaper",
+    "description": "Navbar item with label Whitepaper"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

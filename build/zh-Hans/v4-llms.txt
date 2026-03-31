@@ -1,0 +1,333 @@
+# LLMs.txt for Uniswap v4 Documentation
+
+> Complete reference documentation for Uniswap v4
+
+This file contains links to documentation sections following the llmstxt.org standard.
+
+## Table of Contents
+
+- [Using LLMs.txt or LLMs-full.txt](https://docs.uniswap.org/ai-coding/overview): Uniswap docs are LLM-ready and help developers build on Uniswap v4 faster and more efficiently.
+- [Overview](https://docs.uniswap.org/api/overview): Uniswap provides several APIs and data sources to help developers integrate with and build on top of the Uniswap protocol.
+- [v4 Protocol Query Examples](https://docs.uniswap.org/api/subgraph/guides/v4-subgraph-example): This doc will teach you how to query Uniswap v4 analytics by writing GraphQL queries on the subgraph. You can fetch data points like:
+- [Overview](https://docs.uniswap.org/api/subgraph/overview): Uniswap uses multiple [subgraphs](https://thegraph.com/docs/about/introduction#what-the-graph-is) for indexing and organizing data from the Uniswap...
+- [Entity Types](https://docs.uniswap.org/api/subgraph/subgraphs-devs/all-entities): Following Entity Types are defined in the graph [schema file](https://github.com/Uniswap/v3-subgraph/blob/main/schema.graphql):
+- [Factory Contract](https://docs.uniswap.org/api/subgraph/subgraphs-devs/contracts/factory): |Chain|Address|StartBlock|
+- [NonFungiblePositionManager Contract](https://docs.uniswap.org/api/subgraph/subgraphs-devs/contracts/nonfungiblepositionmanager): |Chain|Address|StartBlock|
+- [Pool Contract (Templatized)](https://docs.uniswap.org/api/subgraph/subgraphs-devs/contracts/pool): |Event Name|Event handler|
+- [Events Monitored](https://docs.uniswap.org/api/subgraph/subgraphs-devs/events): |Event Name|Contract Type|Event handler|Description|
+- [core.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/mappings/core.ts): import Tabs from '@theme/Tabs';
+- [factory.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/mappings/factory.ts): import Tabs from '@theme/Tabs';
+- [position-manager.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/mappings/position-manager.ts): import Tabs from '@theme/Tabs';
+- [Pool Mapping](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/poolMapping.ts): :::info Only in Optimism
+- [backfill.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/utils/backfill.ts): :::info Only in Optimism
+- [constants.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/utils/constants.ts): import Tabs from '@theme/Tabs';
+- [index.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/utils/index.ts): import Tabs from '@theme/Tabs';
+- [intervalUpdates.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/utils/intervalUpdates.ts): import Tabs from '@theme/Tabs';
+- [pricing.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/utils/pricing.ts): import Tabs from '@theme/Tabs';
+- [staticTokenDefinition.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/utils/staticTokenDefinition.ts): import Tabs from '@theme/Tabs';
+- [tick.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/utils/tick.ts): import Tabs from '@theme/Tabs';
+- [token.ts](https://docs.uniswap.org/api/subgraph/subgraphs-devs/functions-n-handlers/utils/token.ts): import Tabs from '@theme/Tabs';
+- [Introduction](https://docs.uniswap.org/api/subgraph/subgraphs-devs/intro): If you're completely new to the working of the V3 protocol, would recommend going through the [references](#references) below.
+- [Resources](https://docs.uniswap.org/api/subgraph/subgraphs-devs/links-n-resources)
+- [Bundle](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/bundle): Entity to store the current Eth price in USD.
+- [Burn](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/burn): Entity to stores the details of a burn event emitted while removing liquidity from a pool.
+- [Collect](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/collect): Entity to store details of a collect event emitted while removing tokens from a position.
+- [Factory](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/factory): Entity to capture metrics for all the pools deployed by a specific [factory contract](../contracts/factory).
+- [Flash](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/flash): Entity to store details of a flash event emitted while a flash loan was taken from a pool.
+- [Mint](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/mint): Entity to store details of a mint event emitted while adding liquidity to a pool.
+- [Pool](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/pool): Entity to store a pool's metadata, current & lifetime metrics and links to events and hourly/daily metrics and references to it's tick entities.
+- [PoolDayData](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/pooldaydata): Entity to store the daily metrics for each pool.
+- [PoolHourData](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/poolhourdata): Entity to store the hourly stats for each pool.
+- [Position](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/position): Entity to store details of a position created through [NonfungiblePositionManager](../contracts/nonfungiblepositionmanager). Stores it's metadata, ...
+- [PositionSnapshot](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/positionsnapshot): Entity storing the state of a position after an action taken on the position.
+- [Swap](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/swap): Entity to stores details of a swap event emitted while swapping one token for the other in a pool.
+- [Tick](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/tick): Entity to stores the metadata for a tick in a pool, it's lifetime metrics and current liquidity and fee variables.
+- [TickDayData](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/tickdaydata): Entities storing the details of Liquidity available & volume of token traded at a tick on a given day.
+- [TickHourData](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/tickhourdata): Entities capturing details of Liquidity available & Volume of token traded at a tick for a given hour.
+- [Token](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/token): Entity to stores the metadata and token level metrics for a token present in any of the pools.
+- [TokenDayData](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/tokendaydata): Entities capturing the daily stats for a token across all of Uniswap.
+- [TokenHourData](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/tokenhourdata): Entities capturing the hourly metrics for a token across all of Uniswap.
+- [Transaction](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/transaction): Entity capturing uniswap transaction details with a list of mint, burn, swap, flash and collects events emitted within a transaction.
+- [UniswapDayData](https://docs.uniswap.org/api/subgraph/subgraphs-devs/schemas/uniswapdaydata): Entities capturing the daily metrics for all of the Uniswap protocol.
+- [Subgraph Configuration](https://docs.uniswap.org/api/subgraph/subgraphs-devs/subgraph-configs): |Subgraph|Code Branch Referred|Graft Base|Graft Block|NFT Position Manager Address|NFT Position Manager Start Block|
+- [Overview](https://docs.uniswap.org/api/trading/overview): The Uniswap Trading API provides quote generation and transaction building for token swaps across 25+ chains. It handles route optimization, gas es...
+- [Get Funded](https://docs.uniswap.org/builder-support/get-funded): Grants and support program for Unichain builders
+- [Security Resources](https://docs.uniswap.org/builder-support/security-resources): Community Security Resources for Unichain builders
+- [Overview](https://docs.uniswap.org/contracts/liquidity-launchpad/01-introduction): The Uniswap Liquidity Launchpad is a comprehensive framework for bootstrapping initial liquidity for Uniswap V4 pools through fair, transparent pri...
+- [Deployments](https://docs.uniswap.org/contracts/liquidity-launchpad/02-deployments): | Network  | Address                                    | Commit Hash                              | Version          |
+- [Continuous Clearing Auction](https://docs.uniswap.org/contracts/liquidity-launchpad/03-auction-mechanism): **Repository:** [github.com/Uniswap/continuous-clearing-auction](https://github.com/Uniswap/continuous-clearing-auction)
+- [Token Factories](https://docs.uniswap.org/contracts/liquidity-launchpad/05-token-factory): Two token factories are included in the [uerc20-factory](https://github.com/Uniswap/uerc20-factory) repository: UERC20Factory and USUPERC20Factory.
+- [Strategies](https://docs.uniswap.org/contracts/liquidity-launchpad/06-strategies): Liquidity strategies are modular contracts for different price discovery and liquidity mechanisms. The stock contracts shipped with the Uniswap Liq...
+- [Custom Validation Hook](https://docs.uniswap.org/contracts/liquidity-launchpad/advanced/01-custom-validation-hook): If you haven't already, please check out the [quickstart guide](../quickstart/local-deployment.md).
+- [Supply schedule](https://docs.uniswap.org/contracts/liquidity-launchpad/advanced/02-supply-schedule): If you haven't already, please check out the [quickstart guide](../quickstart/local-deployment.md).
+- [Example configuration](https://docs.uniswap.org/contracts/liquidity-launchpad/quickstart/example-configuration): ```solidity
+- [Exit and claim tokens](https://docs.uniswap.org/contracts/liquidity-launchpad/quickstart/exit-bid): function run() public {
+- [Submitting a bid](https://docs.uniswap.org/contracts/liquidity-launchpad/quickstart/first-bid): We also added a token supply schedule of 10% in the first 50 blocks, 49% in the next 49 blocks, and 41% in the last block.
+- [Create a local deployment](https://docs.uniswap.org/contracts/liquidity-launchpad/quickstart/local-deployment): Also, please check out the [setup guide](./setup.md) for installation instructions.
+- [Price discovery](https://docs.uniswap.org/contracts/liquidity-launchpad/quickstart/price-discovery): To summarize the current relative parameters:
+- [Setup](https://docs.uniswap.org/contracts/liquidity-launchpad/quickstart/setup): Install dependencies
+- [Deployments](https://docs.uniswap.org/contracts/protocol-fee/deployments): | Contract | Address |
+- [Fee Configuration](https://docs.uniswap.org/contracts/protocol-fee/fee-setting-rational): For v2, fees are hardcoded and can only be enabled or disabled across all pools at once. A full list of v3 pools included in the initial rollout is...
+- [Best Practices](https://docs.uniswap.org/contracts/protocol-fee/guides/best-practices): Below, please find a list of best practices when interacting with the Uniswap Protocol Fee system.
+- [Get Started](https://docs.uniswap.org/contracts/protocol-fee/guides/getting-started): import Tabs from '@theme/Tabs';
+- [Reading Asset Balance](https://docs.uniswap.org/contracts/protocol-fee/guides/read-asset-balance): import Tabs from '@theme/Tabs';
+- [Overview](https://docs.uniswap.org/contracts/protocol-fee/overview): Fees from protocol versions (v2, v3, v4, UniswapX, Unichain) flow into a single onchain collector on each network. From there, specialized contract...
+- [ArrayLib](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/ArrayLib): ```solidity
+- [Deployer](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/Deployer): ```solidity
+- [ExchangeReleaser](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/ExchangeReleaser): **Inherits:**
+- [Firepit](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/Firepit): **Inherits:**
+- [FirepitDestination](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/FirepitDestination): **Inherits:**
+- [FirepitSource](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/FirepitSource): **Inherits:**
+- [IFirepitDestination](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/IFirepitDestination): ```solidity
+- [IL1CrossDomainMessenger](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/IL1CrossDomainMessenger): ```solidity
+- [INonce](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/INonce): ```solidity
+- [IOwned](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/IOwned): Interface for Solmate's Owned.sol contract
+- [IReleaser](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/IReleaser): **Inherits:**
+- [IResourceManager](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/IResourceManager): The interface for managing the resource token and its threshold value
+- [ITokenJar](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/ITokenJar): The interface for releasing assets from the contract
+- [IUniswapV3FactoryOwnerActions](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/IUniswapV3FactoryOwnerActions): The Uniswap V3 Factory facilitates creation of Uniswap V3 pools and control over the
+- [IUniswapV3PoolOwnerActions](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/IUniswapV3PoolOwnerActions): Contains pool methods that may only be called by the factory owner
+- [IV3FeeAdapter](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/IV3FeeAdapter): ```solidity
+- [Nonce](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/Nonce): **Inherits:**
+- [OPStackFirepitSource](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/OPStackFirepitSource): **Inherits:**
+- [ResourceManager](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/ResourceManager): **Inherits:**
+- [TokenJar](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/TokenJar): **Inherits:**
+- [UnauthorizedCall](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/UnauthorizedCall): ```solidity
+- [V3FeeAdapter](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/V3FeeAdapter): **Inherits:**
+- [V4FeeAdapter](https://docs.uniswap.org/contracts/protocol-fee/technical-reference/V4FeeAdapter): **Inherits:**
+- [Overview](https://docs.uniswap.org/contracts/the-compact/overview): [The Compact 🤝](https://github.com/Uniswap/the-compact) is an ownerless ERC6909 contract that facilitates the voluntary formation and mediation of...
+- [Allocators](https://docs.uniswap.org/contracts/the-compact/reference/allocators): Allocators are crucial infrastructure components in The Compact protocol that ensure resource lock integrity and prevent double-spending.
+- [Arbiters](https://docs.uniswap.org/contracts/the-compact/reference/arbiters): Arbiters are entities responsible for verifying and submitting claims against resource locks in The Compact protocol. When a sponsor creates a comp...
+- [Compacts & EIP-712](https://docs.uniswap.org/contracts/the-compact/reference/compacts-eip712): A **compact** is an agreement created by a sponsor that allows their locked resources to be claimed under specified conditions. The Compact protoco...
+- [Core Interfaces](https://docs.uniswap.org/contracts/the-compact/reference/core-interfaces): The Compact protocol is composed of several key interfaces that define its functionality.
+- [Periphery Contracts](https://docs.uniswap.org/contracts/the-compact/reference/periphery-contracts): A sponsor assigns an emissary for a specific `lockTag` using [`assignEmissary`](./src/interfaces/ITheCompact.sol#L556). The emissary must implement...
+- [Resource Locks](https://docs.uniswap.org/contracts/the-compact/reference/resource-locks): Resource locks are the fundamental building blocks of The Compact protocol. They are created when a depositor places tokens (either native tokens o...
+- [Resources](https://docs.uniswap.org/contracts/the-compact/resources): The foundation of The Compact protocol - an ERC6909-based system for reusable resource locks.
+- [PoolManager](https://docs.uniswap.org/contracts/v4/concepts/PoolManager): In Uniswap v3, each liquidity pool was represented by a separate smart contract deployed through the Uniswapv3Factory contract. While this approach...
+- [Dynamic Fees](https://docs.uniswap.org/contracts/v4/concepts/dynamic-fees): Uniswap v4 introduces dynamic fees, allowing for flexible and responsive fee structures managed through hooks. This feature enables pools to adapt ...
+- [ERC-6909](https://docs.uniswap.org/contracts/v4/concepts/erc6909): Uniswap v4 uses [ERC-6909](https://eips.ethereum.org/EIPS/eip-6909) to further improve gas-efficiency on token claims and redemptions.
+- [v4 Fee Structure Guide](https://docs.uniswap.org/contracts/v4/concepts/fee-structure): In Uniswap v4, there are three main types of fees to understand:
+- [Flash Accounting](https://docs.uniswap.org/contracts/v4/concepts/flash-accounting): In previous versions of Uniswap, every time a swap was made - including multi-hop swap - tokens were transferred between Pool contracts for interme...
+- [Hooks](https://docs.uniswap.org/contracts/v4/concepts/hooks): Uniswap v4 introduces Hooks, a system that allows developers to customize and extend the behavior of liquidity pools.
+- [Integrated Routing with UniswapX](https://docs.uniswap.org/contracts/v4/concepts/integrated-routing-uniswap-x): The [Uniswap Interface](https://app.uniswap.org) will be ramping up support for hooks in its standard routing system progressively over time. Hook ...
+- [Security](https://docs.uniswap.org/contracts/v4/concepts/security): When building on Uniswap v4, security should be a primary consideration. This section covers emergency response resources and security best practic...
+- [Subscribers](https://docs.uniswap.org/contracts/v4/concepts/subscribers): Subscribers, new in Uniswap v4, allow for liquidity-position owners to opt-in to a contract that receives _notifications_.
+- [v4 vs v3](https://docs.uniswap.org/contracts/v4/concepts/v4-vs-v3): While Uniswap v4's underlying concentrated liquidity is the same as Uniswap v3,
+- [Deployments](https://docs.uniswap.org/contracts/v4/deployments): The Uniswap Protocol is made up of multiple contracts on many networks.
+- [Calculate LP fees](https://docs.uniswap.org/contracts/v4/guides/15-calculate-lp-fees): With hook introduced in v4, [Dynamic Fees](../concepts/07-dynamic-fees.mdx) is now possible and allow v4 pools to have a flexible and responsive fe...
+- [Subscriber](https://docs.uniswap.org/contracts/v4/guides/16-subscriber): Uniswap v4 introduces Subscribers, a new mechanism in v4 that allows external contracts (aka Subscribers) to be notified by the PositionManager whe...
+- [ERC-6909](https://docs.uniswap.org/contracts/v4/guides/ERC-6909): Uniswap v4 uses [ERC-6909](/contracts/v4/concepts/erc6909), a token standard that works alongside the protocol’s flash accounting system. This guid...
+- [Access msg.sender Inside a Hook](https://docs.uniswap.org/contracts/v4/guides/accessing-msg.sender-using-hook): In Uniswap v4, when a hook is triggered, `msg.sender` is always the PoolManager contract, not the EOA or smart-account that initiated the swap. Thi...
+- [Custom Accounting](https://docs.uniswap.org/contracts/v4/guides/custom-accounting): These features are grouped together because they collectively represent the core of Uniswap v4’s customizability. They all relate to how pool state...
+- [Flash Accounting](https://docs.uniswap.org/contracts/v4/guides/flash-accounting): Flash accounting is v4’s mechanism for tracking token movements throughout a transaction. Unlike traditional token accounting which updates balance...
+- [Hook Deployment](https://docs.uniswap.org/contracts/v4/guides/hooks/hook-deployment): As mentioned in [Concept of Hooks](../../concepts/hooks.mdx), hook contracts indicate their implemented functions by __encoding its behavior in the...
+- [Building Your First Hook](https://docs.uniswap.org/contracts/v4/guides/hooks/your-first-hook): Uniswap introduced the v4 of their protocol introducing several new concepts such as hooks, flash accounting, singleton architecture and more. The ...
+- [Position Manager](https://docs.uniswap.org/contracts/v4/guides/position-manager): The Position Manager in v4 provides a streamlined way to manage liquidity positions through a command-based interface. Unlike previous versions whe...
+- [Reading Pool State](https://docs.uniswap.org/contracts/v4/guides/read-pool-state): Unlike previous versions, v4 uses a different approach for storing and accessing pool data, which requires understanding the use of [`StateLibrary`...
+- [StateView](https://docs.uniswap.org/contracts/v4/guides/state-view): When building on **Uniswap v4**, you will often need to read pool state for both onchain and offchain use cases. Onchain contracts can directly inv...
+- [Swap routing](https://docs.uniswap.org/contracts/v4/guides/swap-routing): Uniswap v4 introduces a new architecture where all pools are managed by a single PoolManager contract. While the underlying architecture uses a cal...
+- [Unlock Callback & Deltas](https://docs.uniswap.org/contracts/v4/guides/unlock-callback): In order to have access to the liquidity inside the `PoolManager`,
+- [Overview](https://docs.uniswap.org/contracts/v4/overview): Uniswap v4 inherits all of the capital efficiency gains of Uniswap v3, but provides flexibility via *hooks* and gas optimizations across the entire...
+- [Create Pool](https://docs.uniswap.org/contracts/v4/quickstart/create-pool): Creating a pool on Uniswap v4 is permissionless and enables the trading of an asset. Uniswap v4 is a popular destination for creating markets due t...
+- [AsyncSwap Hooks](https://docs.uniswap.org/contracts/v4/quickstart/hooks/async-swap): One feature enabled by [custom accounting](/contracts/v4/guides/custom-accounting) is​​​​‌ AsyncSwap swap. This feature allows hook developers to r...
+- [Liquidity Hooks](https://docs.uniswap.org/contracts/v4/quickstart/hooks/liquidity): This guide will walk through on an example of adding and removing liquidity. There are four hook functions available to customize and extend these ...
+- [Set Up Local Environment](https://docs.uniswap.org/contracts/v4/quickstart/hooks/setup): Before writing the hook let's first have a local environment properly configured e.g. deploying pool manager, utility routers and test tokens.
+- [Swap Hooks](https://docs.uniswap.org/contracts/v4/quickstart/hooks/swap): Swaps are the most common interaction with the Uniswap protocol. When it comes to swap there are two hook functions available to customize and exte...
+- [Batch Modify](https://docs.uniswap.org/contracts/v4/quickstart/manage-liquidity/batch-liquidity): As seen in previous guides, `PositionManager` is a command-based contract. This design is conducive to 
+- [Burn Position](https://docs.uniswap.org/contracts/v4/quickstart/manage-liquidity/burn-liquidity): To liquidate a position, the _burn_ functionality can be invoked.
+- [Collect Fees](https://docs.uniswap.org/contracts/v4/quickstart/manage-liquidity/collect): See the [setup guide](./setup-liquidity.mdx)
+- [Decrease Liquidity](https://docs.uniswap.org/contracts/v4/quickstart/manage-liquidity/decrease-liquidity): Please note that `PositionManager` is a command-based contract, where integrators will be encoding commands and their corresponding
+- [Increase Liquidity](https://docs.uniswap.org/contracts/v4/quickstart/manage-liquidity/increase-liquidity): Please note that `PositionManager` is a command-based contract, where integrators will be encoding commands and their corresponding
+- [Mint Position](https://docs.uniswap.org/contracts/v4/quickstart/manage-liquidity/mint-position): Similar to Uniswap v3, liquidity positions are minted as ERC-721 tokens and depend on a *periphery* contract.
+- [Setup](https://docs.uniswap.org/contracts/v4/quickstart/manage-liquidity/setup-liquidity): For users looking to interact with the canonical Uniswap v4 `PositionManager`, _v4-periphery_ is a required dependency
+- [Subscriber](https://docs.uniswap.org/contracts/v4/quickstart/subscriber): For developers looking to support custom _liquidity mining_, Subscriber contracts can be used to receive notifications about position modifications...
+- [Swap](https://docs.uniswap.org/contracts/v4/quickstart/swap): Although it's technically possible to interact directly with the PoolManager contract for swaps, this approach is not recommended due to its comple...
+- [ERC6909](https://docs.uniswap.org/contracts/v4/reference/core/ERC6909): **Inherits:**
+- [ERC6909Claims](https://docs.uniswap.org/contracts/v4/reference/core/ERC6909Claims): **Inherits:**
+- [Extsload](https://docs.uniswap.org/contracts/v4/reference/core/Extsload): **Inherits:**
+- [Exttload](https://docs.uniswap.org/contracts/v4/reference/core/Exttload): **Inherits:**
+- [IPoolManager](https://docs.uniswap.org/contracts/v4/reference/core/IPoolManager): The `IPoolManager` interface defines the main methods for interacting with the Uniswap V4 pool manager contract. It exposes the core _swap lifecycl...
+- [NoDelegateCall](https://docs.uniswap.org/contracts/v4/reference/core/NoDelegateCall): Base contract that provides a modifier for preventing delegatecall to methods in a child contract
+- [PoolManager](https://docs.uniswap.org/contracts/v4/reference/core/PoolManager): **Inherits:**
+- [ProtocolFees](https://docs.uniswap.org/contracts/v4/reference/core/ProtocolFees): **Inherits:**
+- [IERC20Minimal](https://docs.uniswap.org/contracts/v4/reference/core/interfaces/IERC20Minimal): Contains a subset of the full ERC20 interface that is used in Uniswap V3
+- [IERC6909Claims](https://docs.uniswap.org/contracts/v4/reference/core/interfaces/IERC6909Claims): Interface for claims over a contract balance, wrapped as a ERC6909
+- [IExtsload](https://docs.uniswap.org/contracts/v4/reference/core/interfaces/IExtsload): Interface for functions to access any storage slot in a contract
+- [IExttload](https://docs.uniswap.org/contracts/v4/reference/core/interfaces/IExttload): Interface for functions to access any transient storage slot in a contract
+- [IHooks](https://docs.uniswap.org/contracts/v4/reference/core/interfaces/IHooks): V4 decides whether to invoke specific hooks by inspecting the least significant bits
+- [IPoolManager](https://docs.uniswap.org/contracts/v4/reference/core/interfaces/IPoolManager): **Inherits:**
+- [IProtocolFees](https://docs.uniswap.org/contracts/v4/reference/core/interfaces/IProtocolFees): Interface for all protocol-fee related functions in the pool manager
+- [IUnlockCallback](https://docs.uniswap.org/contracts/v4/reference/core/interfaces/IUnlockCallback): Interface for the callback executed when an address unlocks the pool manager
+- [BitMath](https://docs.uniswap.org/contracts/v4/reference/core/libraries/BitMath): **Author:**
+- [CurrencyDelta](https://docs.uniswap.org/contracts/v4/reference/core/libraries/CurrencyDelta): *this library implements the equivalent of a mapping, as transient storage can only be accessed in assembly*
+- [CurrencyReserves](https://docs.uniswap.org/contracts/v4/reference/core/libraries/CurrencyReserves): ```solidity
+- [CustomRevert](https://docs.uniswap.org/contracts/v4/reference/core/libraries/CustomRevert): Contains functions for reverting with custom errors with different argument types efficiently
+- [FixedPoint128](https://docs.uniswap.org/contracts/v4/reference/core/libraries/FixedPoint128): A library for handling binary fixed point numbers, see https://en.wikipedia.org/wiki/Q_(number_format)
+- [FixedPoint96](https://docs.uniswap.org/contracts/v4/reference/core/libraries/FixedPoint96): A library for handling binary fixed point numbers, see https://en.wikipedia.org/wiki/Q_(number_format)
+- [FullMath](https://docs.uniswap.org/contracts/v4/reference/core/libraries/FullMath): Facilitates multiplication and division that can have overflow of an intermediate value without any loss of precision
+- [Hooks](https://docs.uniswap.org/contracts/v4/reference/core/libraries/Hooks): V4 decides whether to invoke specific hooks by inspecting the least significant bits
+- [LPFeeLibrary](https://docs.uniswap.org/contracts/v4/reference/core/libraries/LPFeeLibrary): Library of helper functions for a pools LP fee
+- [LiquidityMath](https://docs.uniswap.org/contracts/v4/reference/core/libraries/LiquidityMath): Add a signed liquidity delta to liquidity and revert if it overflows or underflows
+- [Lock](https://docs.uniswap.org/contracts/v4/reference/core/libraries/Lock): This is a temporary library that allows us to use transient storage (tstore/tload)
+- [NonzeroDeltaCount](https://docs.uniswap.org/contracts/v4/reference/core/libraries/NonzeroDeltaCount): This is a temporary library that allows us to use transient storage (tstore/tload)
+- [ParseBytes](https://docs.uniswap.org/contracts/v4/reference/core/libraries/ParseBytes): Parses bytes returned from hooks and the byte selector used to check return selectors from hooks.
+- [Pool](https://docs.uniswap.org/contracts/v4/reference/core/libraries/Pool): a library with all actions that can be performed on a pool
+- [Position](https://docs.uniswap.org/contracts/v4/reference/core/libraries/Position): Positions represent an owner address' liquidity between a lower and upper tick boundary
+- [ProtocolFeeLibrary](https://docs.uniswap.org/contracts/v4/reference/core/libraries/ProtocolFeeLibrary): library of functions related to protocol fees
+- [SafeCast](https://docs.uniswap.org/contracts/v4/reference/core/libraries/SafeCast): Contains methods for safely casting between types
+- [SqrtPriceMath](https://docs.uniswap.org/contracts/v4/reference/core/libraries/SqrtPriceMath): Contains the math that uses square root of price as a Q64.96 and liquidity to compute deltas
+- [StateLibrary](https://docs.uniswap.org/contracts/v4/reference/core/libraries/StateLibrary): A helper library to provide state getters that use extsload
+- [SwapMath](https://docs.uniswap.org/contracts/v4/reference/core/libraries/SwapMath): Contains methods for computing the result of a swap within a single tick price range, i.e., a single tick.
+- [TickBitmap](https://docs.uniswap.org/contracts/v4/reference/core/libraries/TickBitmap): Stores a packed mapping of tick index to its initialized state
+- [TickMath](https://docs.uniswap.org/contracts/v4/reference/core/libraries/TickMath): Computes sqrt price for ticks of size 1.0001, i.e. sqrt(1.0001^tick) as fixed point Q64.96 numbers. Supports
+- [TransientStateLibrary](https://docs.uniswap.org/contracts/v4/reference/core/libraries/TransientStateLibrary): A helper library to provide state getters that use exttload
+- [UnsafeMath](https://docs.uniswap.org/contracts/v4/reference/core/libraries/UnsafeMath): Contains methods that perform common math functions but do not do any overflow or underflow checks
+- [LiquidityAmounts](https://docs.uniswap.org/contracts/v4/reference/core/libraries/liquidity-amounts): The `LiquidityAmounts` library provides functions for computing liquidity amounts from token amounts and prices in Uniswap V4.
+- [TransientStateLibrary](https://docs.uniswap.org/contracts/v4/reference/core/libraries/transient-state-library): The `TransientStateLibrary` is a crucial component of Uniswap V4, providing utility functions for managing transient state in the PoolManager contr...
+- [ActionsRouter](https://docs.uniswap.org/contracts/v4/reference/core/test/ActionsRouter): **Inherits:**
+- [BaseTestHooks](https://docs.uniswap.org/contracts/v4/reference/core/test/BaseTestHooks): **Inherits:**
+- [CurrencyTest](https://docs.uniswap.org/contracts/v4/reference/core/test/CurrencyTest): ```solidity
+- [CustomCurveHook](https://docs.uniswap.org/contracts/v4/reference/core/test/CustomCurveHook): **Inherits:**
+- [DeltaReturningHook](https://docs.uniswap.org/contracts/v4/reference/core/test/DeltaReturningHook): **Inherits:**
+- [DynamicFeesTestHook](https://docs.uniswap.org/contracts/v4/reference/core/test/DynamicFeesTestHook): **Inherits:**
+- [DynamicReturnFeeTestHook](https://docs.uniswap.org/contracts/v4/reference/core/test/DynamicReturnFeeTestHook): **Inherits:**
+- [EmptyRevertContract](https://docs.uniswap.org/contracts/v4/reference/core/test/EmptyRevertContract): ```solidity
+- [EmptyTestHooks](https://docs.uniswap.org/contracts/v4/reference/core/test/EmptyTestHooks): **Inherits:**
+- [FeeTakingHook](https://docs.uniswap.org/contracts/v4/reference/core/test/FeeTakingHook): **Inherits:**
+- [Fuzzers](https://docs.uniswap.org/contracts/v4/reference/core/test/Fuzzers): **Inherits:**
+- [HooksTest](https://docs.uniswap.org/contracts/v4/reference/core/test/HooksTest): ```solidity
+- [LPFeeTakingHook](https://docs.uniswap.org/contracts/v4/reference/core/test/LPFeeTakingHook): **Inherits:**
+- [LiquidityMathTest](https://docs.uniswap.org/contracts/v4/reference/core/test/LiquidityMathTest): ```solidity
+- [MockContract](https://docs.uniswap.org/contracts/v4/reference/core/test/MockContract): **Inherits:**
+- [MockERC6909Claims](https://docs.uniswap.org/contracts/v4/reference/core/test/MockERC6909Claims): **Inherits:**
+- [MockHooks](https://docs.uniswap.org/contracts/v4/reference/core/test/MockHooks): **Inherits:**
+- [NativeERC20](https://docs.uniswap.org/contracts/v4/reference/core/test/NativeERC20): **Inherits:**
+- [NoDelegateCallTest](https://docs.uniswap.org/contracts/v4/reference/core/test/NoDelegateCallTest): **Inherits:**
+- [PoolClaimsTest](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolClaimsTest): **Inherits:**
+- [PoolDonateTest](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolDonateTest): **Inherits:**
+- [PoolEmptyUnlockTest](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolEmptyUnlockTest): **Inherits:**
+- [PoolModifyLiquidityTest](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolModifyLiquidityTest): **Inherits:**
+- [PoolModifyLiquidityTestNoChecks](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolModifyLiquidityTestNoChecks): **Inherits:**
+- [Action](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolNestedActionsTest): ```solidity
+- [PoolSwapTest](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolSwapTest): **Inherits:**
+- [PoolTakeTest](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolTakeTest): **Inherits:**
+- [PoolTestBase](https://docs.uniswap.org/contracts/v4/reference/core/test/PoolTestBase): **Inherits:**
+- [ProtocolFeesImplementation](https://docs.uniswap.org/contracts/v4/reference/core/test/ProtocolFeesImplementation): **Inherits:**
+- [ProxyPoolManager](https://docs.uniswap.org/contracts/v4/reference/core/test/ProxyPoolManager): **Inherits:**
+- [SkipCallsTestHook](https://docs.uniswap.org/contracts/v4/reference/core/test/SkipCallsTestHook): **Inherits:**
+- [SqrtPriceMathEchidnaTest](https://docs.uniswap.org/contracts/v4/reference/core/test/SqrtPriceMathEchidnaTest): ```solidity
+- [SwapRouterNoChecks](https://docs.uniswap.org/contracts/v4/reference/core/test/SwapRouterNoChecks): **Inherits:**
+- [TestERC20](https://docs.uniswap.org/contracts/v4/reference/core/test/TestERC20): **Inherits:**
+- [TestInvalidERC20](https://docs.uniswap.org/contracts/v4/reference/core/test/TestInvalidERC20): **Inherits:**
+- [TickMathEchidnaTest](https://docs.uniswap.org/contracts/v4/reference/core/test/TickMathEchidnaTest): ```solidity
+- [TickMathTest](https://docs.uniswap.org/contracts/v4/reference/core/test/TickMathTest): ```solidity
+- [TickOverflowSafetyEchidnaTest](https://docs.uniswap.org/contracts/v4/reference/core/test/TickOverflowSafetyEchidnaTest): ```solidity
+- [BalanceDelta](https://docs.uniswap.org/contracts/v4/reference/core/types/BalanceDelta): *Two `int128` values packed into a single `int256` where the upper 128 bits represent the amount0
+- [BeforeSwapDelta](https://docs.uniswap.org/contracts/v4/reference/core/types/BeforeSwapDelta): ```solidity
+- [Currency](https://docs.uniswap.org/contracts/v4/reference/core/types/Currency): ```solidity
+- [PoolId](https://docs.uniswap.org/contracts/v4/reference/core/types/PoolId): ```solidity
+- [PoolKey](https://docs.uniswap.org/contracts/v4/reference/core/types/PoolKey): Returns the key for identifying a pool
+- [Slot0](https://docs.uniswap.org/contracts/v4/reference/core/types/Slot0): *Slot0 is a packed version of solidity structure.
+- [BalanceDelta Guide](https://docs.uniswap.org/contracts/v4/reference/core/types/balancedelta-guide): `BalanceDelta` is a type used in Uniswap V4 to represent the balance changes of two tokens (token0 and token1). It tightly packs the two values in ...
+- [BeforeSwapDelta Guide](https://docs.uniswap.org/contracts/v4/reference/core/types/beforeswapdelta-guide): `BeforeSwapDelta` is a custom type used in Uniswap V4 hook contracts to represent balance changes during swap operations. It is specifically design...
+- [Currency Guide](https://docs.uniswap.org/contracts/v4/reference/core/types/currency-guide): `Currency` is a custom type that represents either native currency (ETH) or ERC20 tokens.
+- [PoolKey Guide](https://docs.uniswap.org/contracts/v4/reference/core/types/poolkey-guide): `PoolKey` is a crucial struct in Uniswap V4 that uniquely identifies a liquidity pool. It encapsulates all the essential parameters that define a p...
+- [Custom Error Selectors](https://docs.uniswap.org/contracts/v4/reference/errors/errors): These are custom error selectors for Uniswap v4 contracts.
+- [PositionDescriptor](https://docs.uniswap.org/contracts/v4/reference/periphery/PositionDescriptor): **Inherits:**
+- [PositionManager](https://docs.uniswap.org/contracts/v4/reference/periphery/PositionManager): **Inherits:**
+- [UniswapV4DeployerCompetition](https://docs.uniswap.org/contracts/v4/reference/periphery/UniswapV4DeployerCompetition): **Inherits:**
+- [V4Router](https://docs.uniswap.org/contracts/v4/reference/periphery/V4Router): **Inherits:**
+- [BaseActionsRouter](https://docs.uniswap.org/contracts/v4/reference/periphery/base/BaseActionsRouter): **Inherits:**
+- [BaseV4Quoter](https://docs.uniswap.org/contracts/v4/reference/periphery/base/BaseV4Quoter): **Inherits:**
+- [DeltaResolver](https://docs.uniswap.org/contracts/v4/reference/periphery/base/DeltaResolver): **Inherits:**
+- [EIP712_v4](https://docs.uniswap.org/contracts/v4/reference/periphery/base/EIP712_v4): **Inherits:**
+- [ERC721Permit_v4](https://docs.uniswap.org/contracts/v4/reference/periphery/base/ERC721Permit_v4): **Inherits:**
+- [ImmutableState](https://docs.uniswap.org/contracts/v4/reference/periphery/base/ImmutableState): **Inherits:**
+- [Multicall_v4](https://docs.uniswap.org/contracts/v4/reference/periphery/base/Multicall_v4): **Inherits:**
+- [NativeWrapper](https://docs.uniswap.org/contracts/v4/reference/periphery/base/NativeWrapper): **Inherits:**
+- [Notifier](https://docs.uniswap.org/contracts/v4/reference/periphery/base/Notifier): **Inherits:**
+- [Permit2Forwarder](https://docs.uniswap.org/contracts/v4/reference/periphery/base/Permit2Forwarder): **Inherits:**
+- [PoolInitializer_v4](https://docs.uniswap.org/contracts/v4/reference/periphery/base/PoolInitializer_v4): **Inherits:**
+- [ReentrancyLock](https://docs.uniswap.org/contracts/v4/reference/periphery/base/ReentrancyLock): A transient reentrancy lock, that stores the caller's address as the lock
+- [SafeCallback](https://docs.uniswap.org/contracts/v4/reference/periphery/base/SafeCallback): **Inherits:**
+- [UnorderedNonce](https://docs.uniswap.org/contracts/v4/reference/periphery/base/UnorderedNonce): **Inherits:**
+- [IEIP712_v4](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IEIP712_v4): Interface for the EIP712 contract
+- [IERC721Permit_v4](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IERC721Permit_v4): Interface for the ERC721Permit_v4 contract
+- [IImmutableState](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IImmutableState): Interface for the ImmutableState contract
+- [IMulticall_v4](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IMulticall_v4): Interface for the Multicall_v4 contract
+- [INotifier](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/INotifier): Interface for the Notifier contract
+- [IPermit2Forwarder](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IPermit2Forwarder): Interface for the Permit2Forwarder contract
+- [IPoolInitializer_v4](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IPoolInitializer_v4): Interface for the PoolInitializer_v4 contract
+- [IPositionDescriptor](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IPositionDescriptor): Interface for the PositionDescriptor contract
+- [IPositionManager](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IPositionManager): **Inherits:**
+- [IStateView](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IStateView): **Inherits:**
+- [ISubscriber](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/ISubscriber): Interface that a Subscriber contract should implement to receive updates from the v4 position manager
+- [IUniswapV4DeployerCompetition](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IUniswapV4DeployerCompetition): Interface for the UniswapV4DeployerCompetition contract
+- [IUnorderedNonce](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IUnorderedNonce): Interface for the UnorderedNonce contract
+- [IV4Quoter](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IV4Quoter): **Inherits:**
+- [IV4Router](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IV4Router): **Inherits:**
+- [IWETH9](https://docs.uniswap.org/contracts/v4/reference/periphery/interfaces/IWETH9): **Inherits:**
+- [StateView](https://docs.uniswap.org/contracts/v4/reference/periphery/lens/StateView): **Inherits:**
+- [V4Quoter](https://docs.uniswap.org/contracts/v4/reference/periphery/lens/V4Quoter): **Inherits:**
+- [ActionConstants](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/ActionConstants): Common constants used in actions
+- [Actions](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/Actions): Library to define different pool actions.
+- [AddressStringUtil](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/AddressStringUtil): provides utility functions for converting addresses to strings
+- [BipsLibrary](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/BipsLibrary): ```solidity
+- [CalldataDecoder](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/CalldataDecoder): *no sane abi encoding will pass in an offset or length greater than type(uint32).max
+- [CurrencyRatioSortOrder](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/CurrencyRatioSortOrder): Provides constants for sorting currencies when displaying price ratios
+- [Descriptor](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/Descriptor): Describes NFT token positions
+- [ERC721PermitHash](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/ERC721PermitHash): ```solidity
+- [HexStrings](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/HexStrings): Provides function for converting numbers to hexadecimal strings
+- [LiquidityAmounts](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/LiquidityAmounts): Provides functions for computing liquidity amounts from token amounts and prices
+- [Locker](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/Locker): This is a temporary library that allows us to use transient storage (tstore/tload)
+- [PathKey](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/PathKey): ```solidity
+- [PositionConfig](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/PositionConfig): ```solidity
+- [PositionConfigId](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/PositionConfigId): A configId is set per tokenId
+- [PositionInfo](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/PositionInfoLibrary): *PositionInfo is a packed version of solidity structure.
+- [QuoterRevert](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/QuoterRevert): reverts, where the revert data is the provided bytes
+- [SVG](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/SVG): Provides a function for generating an SVG associated with a Uniswap NFT
+- [SafeCurrencyMetadata](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/SafeCurrencyMetadata): can produce symbols and decimals from inconsistent or absent ERC20 implementations
+- [SlippageCheck](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/SlippageCheck): a library for checking if a delta exceeds a maximum ceiling or fails to meet a minimum floor
+- [VanityAddressLib](https://docs.uniswap.org/contracts/v4/reference/periphery/libraries/VanityAddressLib): A library to score addresses based on their vanity
+- [BaseHook](https://docs.uniswap.org/contracts/v4/reference/periphery/utils/BaseHook): **Inherits:**
+- [Security Framework](https://docs.uniswap.org/contracts/v4/security): The aim of this guide, and its accompanying [worksheet](https://docs.google.com/spreadsheets/d/1oZdKZh13UbqVp3HujAcv-2NKP-j7NQAELhB7kyWlLRE/edit?us...
+- [Overview](https://docs.uniswap.org/llms/overview): Uniswap provides AI-powered development tools that help you integrate swaps, build v4 hooks, provide liquidity, and interact with the EVM from with...
+- [Create Pool](https://docs.uniswap.org/sdk/v4/guides/advanced/create-pool): In this example we will use **ethers.js** and the **Uniswap v4 SDK** to create pools on Uniswap v4. Uniswap v4 is a popular destination for creatin...
+- [Fetching Pool Data](https://docs.uniswap.org/sdk/v4/guides/advanced/pool-data): In this example we will use **ethers JS** and **ethers-multicall** to construct a `Pool` object that we can use in the following guides.
+- [Adding and Removing Liquidity](https://docs.uniswap.org/sdk/v4/guides/liquidity/add-remove-liquidity): This guide will cover:
+- [Collecting Fee](https://docs.uniswap.org/sdk/v4/guides/liquidity/collecting-fees): This guide will cover:
+- [Fetching Positions](https://docs.uniswap.org/sdk/v4/guides/liquidity/fetching-positions): This guide covers how to fetch and analyze liquidity positions in Uniswap v4 using the v4-sdk.
+- [Minting a position](https://docs.uniswap.org/sdk/v4/guides/liquidity/minting-position): This guide will introduce us to liquidity positions in Uniswap v4 and present the v4-sdk classes and contracts used to interact with the protocol.
+- [Executing Multi-Hop Swaps](https://docs.uniswap.org/sdk/v4/guides/swaps/multi-hop-swapping): This guide demonstrates how to execute multi-hop swaps on Uniswap V4, allowing you to trade between tokens that might not share a direct pool. Mult...
+- [Getting a Quote](https://docs.uniswap.org/sdk/v4/guides/swaps/quoting): This guide will cover how to get the current quotes for any token pair on the Uniswap protocol.
+- [Executing a Single-Hop Swap](https://docs.uniswap.org/sdk/v4/guides/swaps/single-hop-swapping): This guide will build off our [quoting guide](./quoting.md) and show how to use a quote to construct and execute a trade on the Uniswap v4 protocol...
+- [Overview](https://docs.uniswap.org/sdk/v4/overview): > **Welcome to the v4 Uniswap SDK!**
+- [Hook](https://docs.uniswap.org/sdk/v4/reference/classes/Hook): [@uniswap/v4-sdk](../overview.md) / Hook
+- [Pool](https://docs.uniswap.org/sdk/v4/reference/classes/Pool): [@uniswap/v4-sdk](../overview.md) / Pool
+- [Position](https://docs.uniswap.org/sdk/v4/reference/classes/Position): [@uniswap/v4-sdk](../overview.md) / Position
+- [Route](https://docs.uniswap.org/sdk/v4/reference/classes/Route): [@uniswap/v4-sdk](../overview.md) / Route
+- [Trade](https://docs.uniswap.org/sdk/v4/reference/classes/Trade): [@uniswap/v4-sdk](../overview.md) / Trade
+- [V4BaseActionsParser](https://docs.uniswap.org/sdk/v4/reference/classes/V4BaseActionsParser): [@uniswap/v4-sdk](../overview.md) / V4BaseActionsParser
+- [V4Planner](https://docs.uniswap.org/sdk/v4/reference/classes/V4Planner): [@uniswap/v4-sdk](../overview.md) / V4Planner
+- [V4PositionManager](https://docs.uniswap.org/sdk/v4/reference/classes/V4PositionManager): [@uniswap/v4-sdk](../overview.md) / V4PositionManager
+- [V4PositionPlanner](https://docs.uniswap.org/sdk/v4/reference/classes/V4PositionPlanner): [@uniswap/v4-sdk](../overview.md) / V4PositionPlanner
+- [Actions](https://docs.uniswap.org/sdk/v4/reference/enumerations/Actions): [@uniswap/v4-sdk](../overview.md) / Actions
+- [HookOptions](https://docs.uniswap.org/sdk/v4/reference/enumerations/HookOptions): [@uniswap/v4-sdk](../overview.md) / HookOptions
+- [Subparser](https://docs.uniswap.org/sdk/v4/reference/enumerations/Subparser): [@uniswap/v4-sdk](../overview.md) / Subparser
+- [AllowanceTransferPermitBatch](https://docs.uniswap.org/sdk/v4/reference/interfaces/AllowanceTransferPermitBatch): [@uniswap/v4-sdk](../overview.md) / AllowanceTransferPermitBatch
+- [AllowanceTransferPermitSingle](https://docs.uniswap.org/sdk/v4/reference/interfaces/AllowanceTransferPermitSingle): [@uniswap/v4-sdk](../overview.md) / AllowanceTransferPermitSingle
+- [BatchPermitOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/BatchPermitOptions): [@uniswap/v4-sdk](../overview.md) / BatchPermitOptions
+- [BestTradeOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/BestTradeOptions): [@uniswap/v4-sdk](../overview.md) / BestTradeOptions
+- [CollectSpecificOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/CollectSpecificOptions): [@uniswap/v4-sdk](../overview.md) / CollectSpecificOptions
+- [CommonAddLiquidityOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/CommonAddLiquidityOptions): [@uniswap/v4-sdk](../overview.md) / CommonAddLiquidityOptions
+- [CommonOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/CommonOptions): [@uniswap/v4-sdk](../overview.md) / CommonOptions
+- [MethodParameters](https://docs.uniswap.org/sdk/v4/reference/interfaces/MethodParameters): [@uniswap/v4-sdk](../overview.md) / MethodParameters
+- [MintSpecificOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/MintSpecificOptions): [@uniswap/v4-sdk](../overview.md) / MintSpecificOptions
+- [ModifyPositionSpecificOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/ModifyPositionSpecificOptions): [@uniswap/v4-sdk](../overview.md) / ModifyPositionSpecificOptions
+- [NFTPermitData](https://docs.uniswap.org/sdk/v4/reference/interfaces/NFTPermitData): [@uniswap/v4-sdk](../overview.md) / NFTPermitData
+- [NFTPermitOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/NFTPermitOptions): [@uniswap/v4-sdk](../overview.md) / NFTPermitOptions
+- [NFTPermitValues](https://docs.uniswap.org/sdk/v4/reference/interfaces/NFTPermitValues): [@uniswap/v4-sdk](../overview.md) / NFTPermitValues
+- [PermitDetails](https://docs.uniswap.org/sdk/v4/reference/interfaces/PermitDetails): [@uniswap/v4-sdk](../overview.md) / PermitDetails
+- [RemoveLiquiditySpecificOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/RemoveLiquiditySpecificOptions): [@uniswap/v4-sdk](../overview.md) / RemoveLiquiditySpecificOptions
+- [TransferOptions](https://docs.uniswap.org/sdk/v4/reference/interfaces/TransferOptions): [@uniswap/v4-sdk](../overview.md) / TransferOptions
+- [Overview](https://docs.uniswap.org/sdk/v4/reference/overview): - [Actions](enumerations/Actions.md)

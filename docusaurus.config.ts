@@ -8,6 +8,10 @@ import type { Config } from '@docusaurus/types'
 dotenv.config()
 
 const config: Config = {
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "zh-Hans"],
+  },
   staticDirectories: ['static'],
   customFields: {
     // Analytics proxy URL
